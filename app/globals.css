@@ -1,0 +1,673 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --yellow: #FFD600;
+  --white: #fff;
+  --black: #222;
+  --gray: #666;
+  --font-main: 'Montserrat', 'Poppins', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Yellow background */
+.yellow-bg {
+  background: var(--yellow);
+  min-height: 100vh;
+  padding: 80px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* Mac window container */
+.mac-window-continuous {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+/* Mac header */
+.mac-header-continuous {
+  width: 100%;
+  background: #f5f5f5;
+  border-radius: 8px 8px 0 0;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 15;
+}
+
+.mac-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.mac-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.mac-dot.red { background: #ff5f56; }
+.mac-dot.yellow { background: #ffbd2e; }
+.mac-dot.green { background: #27ca3f; }
+
+.mac-title {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.mac-nav-continuous {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.mac-nav-link {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mac-nav-link:hover {
+  color: #333;
+}
+
+/* Mac content */
+.mac-content-continuous {
+  padding: 40px 20px;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  position: relative;
+  z-index: 10;
+  overflow: visible;
+}
+
+/* Flying character container */
+.flying-character-container {
+  position: relative;
+  will-change: transform, opacity, z-index;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* 3D Image Section */
+.hero-section-3d-content {
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFD600 0%, #FFA500 100%);
+  border-radius: 12px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: visible;
+  min-height: 400px;
+}
+
+.hero-3d-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-3d-content-img {
+  width: 500px;
+  height: 650px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+  position: relative;
+  will-change: transform, opacity, z-index;
+  transform-origin: center bottom;
+}
+
+/* Flying animation */
+.plane-flying {
+  transition: transform 2s ease-out, opacity 2s ease-out;
+  position: relative;
+  transform-origin: center bottom;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Hero section */
+.hero-section-mac-wide {
+  margin-top: 0;
+  text-align: center;
+  padding: 8rem 2rem 4rem 2rem;
+  font-family: var(--font-main);
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  min-height: 100px;
+}
+
+.hero-text-center {
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  position: relative;
+  z-index: 20;
+  max-width: 45%;
+}
+
+.hero-title-mac {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #222;
+  line-height: 1.0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 25;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(8, end);
+}
+
+.name-text {
+  display: inline-block;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #222;
+  animation: nameAppear 1s ease-in-out 2s both;
+  opacity: 0;
+}
+
+.dynamic-text-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0;
+  animation: containerAppear 1s ease-in-out 3s both;
+  opacity: 0;
+}
+
+.arrow {
+  font-size: 1.8rem;
+  color: #FFD600;
+  font-weight: bold;
+  animation: arrowPulse 2s ease-in-out infinite;
+}
+
+.dynamic-text {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #222;
+  min-width: 160px;
+  text-align: left;
+  transition: all 0.5s ease;
+  animation: textFade 2s ease-in-out infinite;
+}
+
+.title-container {
+  position: relative;
+  display: inline-block;
+}
+
+.rocket-container {
+  position: absolute;
+  top: -20px;
+  right: -60px;
+  width: 40px;
+  height: 40px;
+  animation: rocketOrbit 8s linear infinite;
+}
+
+.rocket {
+  font-size: 2rem;
+  animation: rocketBounce 2s ease-in-out infinite;
+}
+
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-element {
+  position: absolute;
+  font-size: 1.5rem;
+  animation: floatAround 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1) {
+  top: -30px;
+  left: -40px;
+  animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+  top: 20px;
+  right: -50px;
+  animation-delay: 1.5s;
+}
+
+.floating-element:nth-child(3) {
+  bottom: -20px;
+  left: 20px;
+  animation-delay: 3s;
+}
+
+.floating-element:nth-child(4) {
+  top: 50%;
+  right: -30px;
+  animation-delay: 4.5s;
+}
+
+.hero-img-right {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2));
+  animation: floatY 3.5s ease-in-out infinite;
+  animation-delay: 0.3s;
+  flex-shrink: 0;
+  z-index: 5;
+  position: relative;
+  margin: 25px;
+}
+
+.down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.section-card-mac-wide {
+  background: transparent;
+  border-radius: 1.2rem;
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem 2rem 1.5rem 2rem;
+  box-shadow: none;
+  text-align: center;
+}
+
+.section-title-mac {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 1rem;
+  font-family: var(--font-main);
+}
+
+.section-desc-mac {
+  font-size: 1.1rem;
+  color: #222;
+  font-family: var(--font-main);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.work-3d-mac {
+  margin: 0 auto 1.5rem auto;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-btn-mac {
+  background: #FFD600;
+  color: #222;
+  font-weight: 700;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.cta-btn-mac:hover {
+  background: #222;
+  color: #FFD600;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,0.15);
+}
+
+.footer-mac {
+  width: 100%;
+  border-bottom-left-radius: 2.2rem;
+  border-bottom-right-radius: 2.2rem;
+  background: #fff;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-main);
+  font-size: 1.1rem;
+  color: #222;
+  margin-top: 1rem;
+}
+
+.footer-socials-mac {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-social-mac {
+  color: #222;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-mac:hover {
+  color: #FFD600;
+  transform: translateY(-2px);
+}
+
+/* Frame styles */
+.frame {
+  width: 450px;
+  height: 450px;
+  max-width: 450px;
+  max-height: 450px;
+  margin: 0 auto;
+  border: 2px #fbfbfb solid;
+  position: relative;
+  box-shadow: inset 0 0 0 20px white;
+  background: transparent;
+  transition: ease all 0.3s;
+  border-radius: 16px;
+  overflow: visible;
+}
+
+.frame:hover {
+  box-shadow: inset 0 0 0 0 white;
+  border: 2px #f9f9f9 solid;
+  cursor: pointer;
+}
+
+.frame:hover .text {
+  mix-blend-mode: difference;
+}
+
+.frame:hover .text span {
+  color: #ff8489;
+}
+
+.frame .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: ease all 0.3s;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.frame .text span {
+  font-size: 18px;
+  display: inline-block;
+  text-align: center;
+  width: 18px;
+  animation: frameMove 10s linear infinite;
+  position: absolute;
+  transition: ease all 0.3s;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Animations */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-32px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes nameAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes containerAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes arrowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  0%, 100% { 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  50% { 
+    text-shadow: 0 4px 8px rgba(255, 214, 0, 0.3), 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
+
+@keyframes rocketOrbit {
+  0% {
+    transform: rotate(0deg) translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0) rotate(-360deg);
+  }
+}
+
+@keyframes rocketBounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-5deg);
+  }
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-15px) rotate(90deg) scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(0) rotate(180deg) scale(1);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translateY(15px) rotate(270deg) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+@keyframes textFade {
+  0%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  95%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes frameMove {
+  0% {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg);
+  }
+  24% {
+    top: 0;
+    left: calc(100% - 18px);
+    transform: rotate(0deg);
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 18px);
+    transform: rotate(90deg);
+  }
+  49% {
+    top: calc(100% - 18px);
+    left: calc(100% - 18px);
+    transform: rotate(90deg);
+  }
+  50% {
+    top: calc(100% - 18px);
+    left: calc(100% - 18px);
+    transform: rotate(180deg);
+  }
+  74% {
+    top: calc(100% - 18px);
+    left: 0;
+    transform: rotate(180deg);
+  }
+  75% {
+    top: calc(100% - 18px);
+    left: 0;
+    transform: rotate(270deg);
+  }
+  99% {
+    top: 0;
+    left: 0;
+    transform: rotate(270deg);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .hero-content-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    min-height: 150px;
+  }
+  .hero-text-center { 
+    padding: 0; 
+    min-height: 120px;
+  }
+  .hero-img-right { 
+    width: 240px; 
+    height: 240px; 
+  }
+  .hero-title-mac {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-img-right { 
+    width: 200px; 
+    height: 200px; 
+  }
+  .hero-title-mac { 
+    font-size: 2.2rem; 
+  }
+  .hero-content-flex {
+    padding: 0 2rem;
+  }
+} 
+
+ 
