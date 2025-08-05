@@ -4,7 +4,8 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import AboutMeSection from '../components/AboutMeSection'
 import MosaicGrid from '../components/MosaicGrid'
-import MainHeader from '../components/MainHeader'
+import MainPageHeader from '../components/MainPageHeader'
+
 
 export default function Home() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -32,8 +33,10 @@ export default function Home() {
           <div className="mac-title">Portfolio</div>
           <nav className="mac-nav-continuous">
             <a href="#about" className="mac-nav-link">ABOUT</a>
-            <a href="#work" className="mac-nav-link">DESIGNER</a>
-            <a href="#contact" className="mac-nav-link">DEVELOPER</a>
+            <a href="/experience" className="mac-nav-link">EXPERIENCE</a>
+            <a href="/education" className="mac-nav-link">EDUCATION</a>
+            <a href="/projects" className="mac-nav-link">PROJECTS</a>
+            <a href="/skills" className="mac-nav-link">SKILLS</a>
             <a href="#contact" className="mac-nav-link">CONTACT</a>
           </nav>
         </div>
@@ -41,7 +44,7 @@ export default function Home() {
         {/* Content Sections */}
         <div className="mac-content-continuous">
           {/* 3D Animated Header */}
-          <MainHeader />
+          <MainPageHeader />
           
           {/* Hero Section - Clean Start */}
           <section className="hero-section-mac-wide">
@@ -134,13 +137,13 @@ export default function Home() {
                   <Image 
                     src="/5132551-removebg-preview.png" 
                     alt="3D Character" 
-                    width={350} 
-                    height={450} 
+                    width={280} 
+                    height={360} 
                     priority 
                     style={{
                       filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.2))',
-                      width: '350px',
-                      height: '450px',
+                      width: '280px',
+                      height: '360px',
                       objectFit: 'contain'
                     }}
                   />
