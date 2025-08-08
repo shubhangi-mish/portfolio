@@ -114,7 +114,7 @@ body {
 /* Mac content */
 .mac-content-continuous {
   padding: 30px 20px;
-  background: white;
+  background: transparent;
   border-radius: 0 0 8px 8px;
   position: relative;
   z-index: 10;
@@ -148,7 +148,7 @@ body {
 .hero-section-3d-content-compact {
   width: 100%;
   max-width: 1025px;
-  margin: 1.5rem auto 1.5rem auto;
+  margin: 1.5rem auto 4rem auto;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -572,7 +572,7 @@ body {
 .section-card-mac-wide {
   background: transparent;
   border-radius: 1.2rem;
-  margin: 1.5rem auto 1.5rem auto;
+  margin: 1.5rem auto 2rem auto;
   padding: 2rem 2rem 1.5rem 2rem;
   box-shadow: none;
   text-align: center;
@@ -1263,7 +1263,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
+  min-height: 200px;
   background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
   margin-bottom: 2rem;
   border-radius: 12px;
@@ -1289,13 +1289,13 @@ body {
   line-height: 0.76em;
   position: absolute;
   color: #fff;
-  font-size: 2.2em;
+  font-size: 1.8em;
   white-space: nowrap;
   font-weight: bold;
   padding: 0px 10px;
   transform-style: preserve-3d;
   text-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-  transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(80px);
+  transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(60px);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -2074,7 +2074,7 @@ body {
   background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 50%, #FFF176 100%);
   border-radius: 12px;
   border: 2px solid #FFD600;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 4rem auto;
   max-width: 800px;
   padding: 0.8rem;
   overflow: hidden;
@@ -2407,16 +2407,98 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   margin: 2rem auto;
-  max-width: 900px;
-  padding: 3rem;
+  max-width: 1200px;
+  padding: 2rem;
   overflow: hidden;
 }
 
+/* Central Timeline Styles */
+.experience-timeline-center {
+  position: relative;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.timeline-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #FFD600, #FFA000);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item-center {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-item-center.left {
+  justify-content: flex-start;
+}
+
+.timeline-item-center.right {
+  justify-content: flex-end;
+}
+
+.timeline-marker-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 16px rgba(255, 214, 0, 0.3);
+  z-index: 2;
+  border: 4px solid white;
+}
+
+.timeline-content-center {
+  width: 48%;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #FFD600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-item-center.left .timeline-content-center {
+  margin-right: auto;
+  border-right: 4px solid #FFD600;
+}
+
+.timeline-item-center.right .timeline-content-center {
+  margin-left: auto;
+  border-left: 4px solid #FFD600;
+}
+
+.timeline-content-center:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item-center.left .timeline-content-center:hover {
+  border-right-color: #FFA000;
+}
+
+.timeline-item-center.right .timeline-content-center:hover {
+  border-left-color: #FFA000;
+}
+
 .experience-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #222;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   font-family: var(--font-main);
 }
@@ -2439,8 +2521,8 @@ body {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 2.5rem;
-  padding-left: 60px;
+  margin-bottom: 2rem;
+  padding-left: 50px;
 }
 
 .timeline-marker {
@@ -2457,7 +2539,7 @@ body {
 
 .timeline-content {
   background: #f8f9fa;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 8px;
   border-left: 4px solid #FFD600;
   transition: all 0.3s ease;
@@ -2473,7 +2555,7 @@ body {
 }
 
 .timeline-header h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #222;
   margin-bottom: 0.5rem;
@@ -2494,6 +2576,15 @@ body {
   color: #666;
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+.location {
+  display: block;
+  color: #888;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 0.25rem;
+  font-style: italic;
 }
 
 .timeline-description {
@@ -2521,15 +2612,15 @@ body {
 .experience-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 2px solid #f0f0f0;
 }
 
 .stat-item {
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.2rem;
   background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 100%);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -2541,7 +2632,7 @@ body {
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #222;
   margin-bottom: 0.5rem;
@@ -2571,6 +2662,42 @@ body {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
+  /* Mobile styles for central timeline */
+  .experience-timeline-center {
+    padding: 0 1rem;
+  }
+
+  .timeline-item-center {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-item-center.left,
+  .timeline-item-center.right {
+    justify-content: center;
+  }
+
+  .timeline-content-center {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .timeline-item-center.left .timeline-content-center {
+    border-right: none;
+    border-left: 4px solid #FFD600;
+  }
+
+  .timeline-item-center.right .timeline-content-center {
+    border-left: none;
+    border-right: 4px solid #FFD600;
+  }
+
+  .timeline-marker-center {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
 }
 
 /* Education Card Styles */
@@ -2582,6 +2709,181 @@ body {
   max-width: 1200px;
   padding: 3rem;
   overflow: hidden;
+}
+
+.education-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: var(--font-main);
+}
+
+/* Education Timeline Styles - Same as Experience */
+.education-timeline-center {
+  position: relative;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.timeline-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #FFD600, #FFA000);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item-center {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-item-center.left {
+  justify-content: flex-start;
+}
+
+.timeline-item-center.right {
+  justify-content: flex-end;
+}
+
+.timeline-marker-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 16px rgba(255, 214, 0, 0.3);
+  z-index: 2;
+  border: 4px solid white;
+}
+
+.timeline-content-center {
+  width: 40%;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid #FFD600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.timeline-item-center.left .timeline-content-center {
+  margin-right: auto;
+  border-right: 4px solid #FFD600;
+}
+
+.timeline-item-center.right .timeline-content-center {
+  margin-left: auto;
+  border-left: 4px solid #FFD600;
+}
+
+.timeline-content-center:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item-center.left .timeline-content-center:hover {
+  border-right-color: #FFA000;
+}
+
+.timeline-item-center.right .timeline-content-center:hover {
+  border-left-color: #FFA000;
+}
+
+.education-icon {
+  font-size: 1rem;
+  color: white;
+}
+
+.education-snake-content:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 214, 0, 0.2);
+  border-color: #FFA000;
+}
+
+.education-header {
+  margin-bottom: 0.8rem;
+}
+
+.education-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.4rem;
+}
+
+.institution {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FFA000;
+  margin-bottom: 0.2rem;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  font-style: italic;
+}
+
+.duration {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.cgpa {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #FFD600;
+  background: rgba(255, 214, 0, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+.education-description {
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
+}
+
+.education-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.education-skill-tag {
+  background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
+  color: #222;
+  padding: 0.25rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 214, 0, 0.3);
+}
+
+.education-skill-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 214, 0, 0.4);
 }
 
 .education-content {
@@ -2766,6 +3068,42 @@ body {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
+  /* Mobile styles for education timeline */
+  .education-timeline-center {
+    padding: 0 1rem;
+  }
+
+  .timeline-item-center {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-item-center.left,
+  .timeline-item-center.right {
+    justify-content: center;
+  }
+
+  .timeline-content-center {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .timeline-item-center.left .timeline-content-center {
+    border-right: none;
+    border-left: 4px solid #FFD600;
+  }
+
+  .timeline-item-center.right .timeline-content-center {
+    border-left: none;
+    border-right: 4px solid #FFD600;
+  }
+
+  .timeline-marker-center {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
 }
 
 /* Hero Section with Dark Code Editor */
@@ -2775,7 +3113,7 @@ body {
   justify-content: space-between;
   padding: 2rem;
   min-height: 400px;
-  margin: 2rem 0;
+  margin: 1.5rem auto 4rem auto;
   gap: 2rem;
 }
 
