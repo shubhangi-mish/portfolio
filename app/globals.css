@@ -359,33 +359,196 @@ body {
   font-weight: 800;
   color: #222;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-family: var(--font-main);
 }
 
-.achievements-subtitle {
-  font-size: 1.1rem;
-  color: #666;
+.achievement-category {
+  margin-bottom: 4rem;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
   text-align: center;
-  margin-bottom: 3rem;
-  line-height: 1.6;
+  margin-bottom: 2rem;
   font-family: var(--font-main);
-}
-
-.achievements-timeline {
   position: relative;
-  margin-bottom: 3rem;
 }
 
-.achievements-timeline::before {
+.category-title::after {
   content: '';
   position: absolute;
-  left: 30px;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #FFD600, #FFA000);
+  border-radius: 2px;
+}
+
+.achievement-timeline-center {
+  position: relative;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
+
+.achievement-timeline-center .timeline-center-line {
+  position: absolute;
+  left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
+  width: 4px;
   background: linear-gradient(to bottom, #FFD600, #FFA000);
-  border-radius: 1px;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.achievement-timeline-center .timeline-item-center {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.achievement-timeline-center .timeline-item-center.left {
+  justify-content: flex-start;
+}
+
+.achievement-timeline-center .timeline-item-center.right {
+  justify-content: flex-end;
+}
+
+.achievement-timeline-center .timeline-marker-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 16px rgba(255, 214, 0, 0.3);
+  z-index: 2;
+  border: 3px solid white;
+}
+
+.achievement-timeline-center .timeline-content-center {
+  width: 48%;
+  background: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 2px solid #FFD600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.achievement-timeline-center .timeline-item-center.left .timeline-content-center {
+  margin-right: auto;
+  border-right: 4px solid #FFD600;
+}
+
+.achievement-timeline-center .timeline-item-center.right .timeline-content-center {
+  margin-left: auto;
+  border-left: 4px solid #FFD600;
+}
+
+.achievement-timeline-center .timeline-content-center:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-timeline-center .timeline-item-center.left .timeline-content-center:hover {
+  border-right-color: #FFA000;
+}
+
+.achievement-timeline-center .timeline-item-center.right .timeline-content-center:hover {
+  border-left-color: #FFA000;
+}
+
+.achievement-icon {
+  font-size: 1rem;
+  color: white;
+}
+
+.achievement-header {
+  margin-bottom: 0.6rem;
+}
+
+.achievement-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+.achievement-header .organization {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #FFA000;
+  margin-bottom: 0.15rem;
+  display: block;
+}
+
+.achievement-header .location {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+  font-style: italic;
+  display: block;
+}
+
+.achievement-header .date {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+  display: block;
+}
+
+.achievement-header .category-badge {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #FFD600;
+  background: rgba(255, 214, 0, 0.1);
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+
+.achievement-description {
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.achievement-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.achievement-skill-tag {
+  background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
+  color: #222;
+  padding: 0.25rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(255, 214, 0, 0.3);
+}
+
+.achievement-skill-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 214, 0, 0.4);
 }
 
 .timeline-item {
@@ -2433,7 +2596,7 @@ body {
 
 .timeline-item-center {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   display: flex;
   align-items: center;
 }
@@ -2463,7 +2626,7 @@ body {
 .timeline-content-center {
   width: 48%;
   background: #f8f9fa;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 12px;
   border: 2px solid #FFD600;
   transition: all 0.3s ease;
@@ -2551,46 +2714,47 @@ body {
 }
 
 .timeline-header {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .timeline-header h3 {
   font-size: 1.1rem;
   font-weight: 700;
   color: #222;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .company {
   display: inline-block;
   background: #FFD600;
   color: #222;
-  padding: 0.3rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
 .duration {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 .location {
   display: block;
   color: #888;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 400;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
   font-style: italic;
 }
 
 .timeline-description {
   color: #555;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
 }
 
 .timeline-skills {
@@ -2698,6 +2862,42 @@ body {
     height: 16px;
     border-width: 3px;
   }
+
+  /* Mobile styles for achievement timeline */
+  .achievement-timeline-center {
+    padding: 0 1rem;
+  }
+
+  .achievement-timeline-center .timeline-item-center {
+    flex-direction: column;
+    margin-bottom: 3rem;
+  }
+
+  .achievement-timeline-center .timeline-item-center.left,
+  .achievement-timeline-center .timeline-item-center.right {
+    justify-content: center;
+  }
+
+  .achievement-timeline-center .timeline-content-center {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .achievement-timeline-center .timeline-item-center.left .timeline-content-center {
+    border-right: none;
+    border-left: 4px solid #FFD600;
+  }
+
+  .achievement-timeline-center .timeline-item-center.right .timeline-content-center {
+    border-left: none;
+    border-right: 4px solid #FFD600;
+  }
+
+  .achievement-timeline-center .timeline-marker-center {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
 }
 
 /* Education Card Styles */
@@ -2712,7 +2912,7 @@ body {
 }
 
 .education-title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #222;
   margin-bottom: 1.5rem;
@@ -2741,7 +2941,7 @@ body {
 
 .timeline-item-center {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   display: flex;
   align-items: center;
 }
@@ -2758,20 +2958,20 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 16px rgba(255, 214, 0, 0.3);
   z-index: 2;
-  border: 4px solid white;
+  border: 3px solid white;
 }
 
 .timeline-content-center {
-  width: 40%;
+  width: 48%;
   background: #f8f9fa;
-  padding: 1rem;
+  padding: 0.8rem;
   border-radius: 12px;
   border: 2px solid #FFD600;
   transition: all 0.3s ease;
@@ -2814,28 +3014,28 @@ body {
 }
 
 .education-header {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .education-header h3 {
   font-size: 1.1rem;
   font-weight: 700;
   color: #222;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .institution {
   font-size: 0.9rem;
   font-weight: 600;
   color: #FFA000;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .location {
   font-size: 0.8rem;
   color: #888;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
   font-style: italic;
 }
 
@@ -2843,7 +3043,7 @@ body {
   font-size: 0.8rem;
   color: #666;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.15rem;
 }
 
 .cgpa {
@@ -2854,13 +3054,13 @@ body {
   padding: 0.15rem 0.4rem;
   border-radius: 6px;
   display: inline-block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 .education-description {
   color: #555;
-  line-height: 1.5;
-  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
   font-size: 0.85rem;
 }
 

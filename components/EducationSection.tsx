@@ -147,27 +147,6 @@ const EducationSection: React.FC = () => {
           </motion.div>
         ))}
       </div>
-
-      <motion.div 
-        className="education-stats"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-      >
-        <div className="stat-item">
-          <div className="stat-number">8.9</div>
-          <div className="stat-label">Highest CGPA</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-number">4</div>
-          <div className="stat-label">Years Study</div>
-        </div>
-        <div className="stat-item">
-          <div className="stat-number">10+</div>
-          <div className="stat-label">Subjects</div>
-        </div>
-      </motion.div>
     </div>
   );
 };
