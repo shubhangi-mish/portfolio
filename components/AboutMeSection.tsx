@@ -18,14 +18,17 @@ const AboutMeSection: React.FC = () => {
         <h2 className="about-me-title">About Me</h2>
         <div className="about-me-text">
           <p className="about-me-paragraph">
-            <strong>Lorem</strong> ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            Hi, I'm <strong>Shubhangi Mishra</strong>, a 2025 graduate with dual degrees in B.Tech Computer Science (GGSIPU) and B.Sc. Data Science (IIT Madras). I've worked across two continents in high-impact AI roles, delivering real products for global, remote teams.
           </p>
           <p className="about-me-paragraph">
-            <strong><u>Gubergren</u></strong> no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            At <strong><u>Openfabric AI</u></strong> (Europe), I built an automated pipeline that ran 70%+ Hugging Face models inside their ecosystem. At <strong>Hello Recruiter</strong> (US), I was the first hire and co-built their AI-powered hiring assistant MVP in just six months. Now, I lead the AI architecture at <strong>Fastr Payments</strong>, a new fintech venture.
           </p>
           <div className="about-me-separator"></div>
           <p className="about-me-paragraph">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd <strong>gubergren</strong>, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            I've contributed to global LLM tooling at <strong>Omdena UAE</strong>, developed blockchain DApps, and published research on deepfake detection and blockchain integrity. I build with Python, FastAPI, React, LangChain, Docker, Chroma, Pinecone, Solidity, and more — creating AI systems, LLM tools, and automation pipelines from scratch.
+          </p>
+          <p className="about-me-paragraph">
+            If you're looking for someone who can build, own, and lead from Day 1 — <strong>I'm ready</strong>.
           </p>
         </div>
         <div className="about-me-border-line"></div>

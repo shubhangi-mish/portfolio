@@ -5,7 +5,16 @@ const MosaicGrid: React.FC = () => {
   const router = useRouter();
 
   const handleTileClick = (route: string) => {
-    router.push(route);
+    if (route.startsWith('#')) {
+      // Handle hash navigation for same page sections
+      const element = document.querySelector(route);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Handle external page navigation
+      router.push(route);
+    }
   };
 
   return (
@@ -27,7 +36,7 @@ const MosaicGrid: React.FC = () => {
           <h3>Skills</h3>
           <p>Technical expertise</p>
         </div>
-        <div className="mosaic-tile" id="tile__5" onClick={() => handleTileClick('/contact')}>
+        <div className="mosaic-tile" id="tile__5" onClick={() => handleTileClick('#contact')}>
           <h3>Contact</h3>
           <p>Get in touch</p>
         </div>
