@@ -11,13 +11,13 @@ const MosaicGrid: React.FC = () => {
   return (
     <div className="mosaic-container">
       <div className="mosaic-grid">
-        <div className="mosaic-tile" id="tile__1" onClick={() => handleTileClick('/about')}>
-          <h3>About Me</h3>
-          <p>Learn more about my journey</p>
+        <div className="mosaic-tile" id="tile__1" onClick={() => handleTileClick('/projects')}>
+          <h3>Projects</h3>
+          <p>View my latest work</p>
         </div>
-        <div className="mosaic-tile" id="tile__2" onClick={() => handleTileClick('/portfolio')}>
-          <h3>Portfolio</h3>
-          <p>View my latest projects</p>
+        <div className="mosaic-tile" id="tile__2" onClick={() => handleTileClick('/achievements')}>
+          <h3>Achievements</h3>
+          <p>Awards & recognition</p>
         </div>
         <div className="mosaic-tile" id="tile__3" onClick={() => handleTileClick('/experience')}>
           <h3>Experience</h3>
@@ -31,9 +31,9 @@ const MosaicGrid: React.FC = () => {
           <h3>Contact</h3>
           <p>Get in touch</p>
         </div>
-        <div className="mosaic-tile" id="tile__6" onClick={() => handleTileClick('/blog')}>
-          <h3>Blog</h3>
-          <p>Thoughts & insights</p>
+        <div className="mosaic-tile" id="tile__6" onClick={() => handleTileClick('/education')}>
+          <h3>Education</h3>
+          <p>Academic background</p>
         </div>
       </div>
     </div>

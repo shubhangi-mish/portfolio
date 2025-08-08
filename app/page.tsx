@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import AboutMeSection from '../components/AboutMeSection'
 import MosaicGrid from '../components/MosaicGrid'
 import MainPageHeader from '../components/MainPageHeader'
+import DroppingText from '../components/DroppingText'
+import HeroSection from '../components/HeroSection'
 
 
 export default function Home() {
@@ -43,49 +45,25 @@ export default function Home() {
 
         {/* Content Sections */}
         <div className="mac-content-continuous">
-          {/* 3D Animated Header */}
+                    {/* 3D Animated Header */}
           <MainPageHeader />
           
-          {/* Hero Section - Clean Start */}
-          <section className="hero-section-mac-wide">
-            <div className="hero-content-flex">
-              {/* Left side - Text */}
-              <div className="hero-text-center">
-                <h1 className="hero-title-mac">
-                  Hi there! I am Shubhangi Mishra.
-                </h1>
-                <p className="hero-subtitle">
-                  Welcome to my portfolio
-                </p>
-              </div>
-              
-              {/* Right side - Photo */}
-              <div className="hero-image-right">
-                <Image src="/meee-removebg-preview.png" alt="Your Photo" width={400} height={400} className="hero-img-right" priority />
-              </div>
-            </div>
-          </section>
-          
-          {/* Downward Arrow */}
-          <div className="down-arrow">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 9L12 15L18 9" stroke="#FFD600" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-          
-          {/* 3D Image Section with Flying Animation */}
+          {/* Hero Section with Mosaic Code Editor */}
+          <HeroSection />
+            
+            {/* 3D Image Section with Flying Animation */}
           <section className="hero-section-3d-content-compact">
             <div style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
               width: '100%',
-              gap: '30px',
+              gap: '15px',
               padding: '20px'
             }}>
               {/* Left side - Welcome message and navigation */}
               <div style={{
-                flex: 1,
+                flex: 1.5,
                 textAlign: 'left',
                 color: '#222',
                 fontFamily: 'var(--font-main)',
@@ -96,21 +74,14 @@ export default function Home() {
                   marginBottom: '25px'
                 }}>
                   <h1 style={{
-                    fontSize: '2rem',
+                    fontSize: '1.8rem',
                     fontWeight: '900',
-                    marginBottom: '0.5rem',
-                    lineHeight: '1.2'
+                    marginBottom: '1rem',
+                    lineHeight: '1',
+                    position: 'relative'
                   }}>
-                    Welcome to Shubhangi's Portfolio
+                    <span className="typing-text" data-text="What do you wanna explore first?">What do you wanna explore first?</span>
                   </h1>
-                  <p style={{
-                    fontSize: '1rem',
-                    fontWeight: '600',
-                    color: '#444',
-                    marginBottom: '1.5rem'
-                  }}>
-                    Let's go meet her!
-                  </p>
                 </div>
 
                 {/* Mosaic Grid Navigation */}
@@ -119,7 +90,7 @@ export default function Home() {
 
               {/* Right side - 3D Character */}
               <div style={{ 
-                flex: 1,
+                flex: 0.8,
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center'
@@ -138,12 +109,12 @@ export default function Home() {
                     src="/5132551-removebg-preview.png" 
                     alt="3D Character" 
                     width={280} 
-                    height={360} 
+                    height={350} 
                     priority 
+                    className="floating-character"
                     style={{
-                      filter: 'drop-shadow(0 8px 24px rgba(0,0,0,0.2))',
-                      width: '280px',
-                      height: '360px',
+                      width: '250px',
+                      height: '320px',
                       objectFit: 'contain'
                     }}
                   />
