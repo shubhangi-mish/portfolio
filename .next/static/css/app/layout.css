@@ -2833,7 +2833,7 @@ body {
 }
 
 .project-image {
-  height: 200px;
+  height: 100px;
   background: linear-gradient(135deg, #FFD600 0%, #FFA000 100%);
   display: flex;
   align-items: center;
