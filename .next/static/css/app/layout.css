@@ -3081,13 +3081,13 @@ body {
   line-height: 0.76em;
   position: absolute;
   color: #fff;
-  font-size: 2.2em;
+  font-size: 1.8em;
   white-space: nowrap;
   font-weight: bold;
-  padding: 0px 10px;
+  padding: 0px 8px;
   transform-style: preserve-3d;
   text-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-  transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(80px);
+  transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(60px);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -3109,15 +3109,15 @@ body {
   background: white;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   max-width: 1400px;
-  padding: 3rem;
+  padding: 2rem;
   overflow: hidden;
 }
 
 .skills-mosaic-grid {
   display: grid;
-  grid-gap: 0.8em;
+  grid-gap: 0.5em;
   grid-template-areas: 
     'square1 square1 largesquare largesquare largesquare'
     'square1 square1 largesquare largesquare largesquare'
@@ -3136,10 +3136,16 @@ body {
     'square6 square6 largesquare3 largesquare3 largesquare3'
     'square6 square6 smallsquare3 tallrect3 tallrect3'
     'widerect3 widerect3 widerect3 tallrect3 tallrect3'
-    'widerect3 widerect3 widerect3 tallrect3 tallrect3';
-  height: 1800px;
+    'widerect3 widerect3 widerect3 tallrect3 tallrect3'
+    'square7 square7 largesquare4 largesquare4 largesquare4'
+    'square7 square7 largesquare4 largesquare4 largesquare4'
+    'square8 square8 largesquare4 largesquare4 largesquare4'
+    'square8 square8 smallsquare4 tallrect4 tallrect4'
+    'widerect4 widerect4 widerect4 tallrect4 tallrect4'
+    'widerect4 widerect4 widerect4 tallrect4 tallrect4';
+  height: 1600px;
   background: #FFD600;
-  padding: 0.5em 2em;
+  padding: 0.3em 1.5em;
   border-radius: 12px;
   border: 3px solid #FFA000;
 }
@@ -3179,7 +3185,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.7em;
+  padding: 0.5em;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   background: white;
@@ -3205,6 +3211,12 @@ body {
 #skill__16 .skill-front { background: #FFFBF5; }
 #skill__17 .skill-front { background: #FFFEF0; }
 #skill__18 .skill-front { background: #FFFFF8; }
+#skill__19 .skill-front { background: #FFF8F0; }
+#skill__20 .skill-front { background: #FFF5F0; }
+#skill__21 .skill-front { background: #FFF0F5; }
+#skill__22 .skill-front { background: #FFF0F8; }
+#skill__23 .skill-front { background: #FFF0FF; }
+#skill__24 .skill-front { background: #FFF8FF; }
 
 .skill-back {
   position: absolute;
@@ -3215,7 +3227,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.7em;
+  padding: 0.5em;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   background: white;
@@ -3228,50 +3240,75 @@ body {
 .skill-back h3 {
   color: #222;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
 }
 
 .skill-back p {
   color: #222;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin: 0;
 }
 
 .skill-back .skill-logo {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
   font-weight: bold;
 }
 
 .skill-logo {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
   font-weight: bold;
 }
 
+/* Smaller logo for small tiles */
+.skill-tile.smallsquare .skill-logo,
+.skill-tile.smallsquare2 .skill-logo,
+.skill-tile.smallsquare3 .skill-logo,
+.skill-tile.smallsquare4 .skill-logo {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
 .skill-tile h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
   color: #222;
 }
 
-.skill-tile p {
+/* Smaller font for small tiles */
+.skill-tile.smallsquare h3,
+.skill-tile.smallsquare2 h3,
+.skill-tile.smallsquare3 h3,
+.skill-tile.smallsquare4 h3 {
   font-size: 0.9rem;
+}
+
+.skill-tile p {
+  font-size: 0.75rem;
   font-weight: 400;
   color: #666;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.1;
+}
+
+/* Smaller font for small tile descriptions */
+.skill-tile.smallsquare p,
+.skill-tile.smallsquare2 p,
+.skill-tile.smallsquare3 p,
+.skill-tile.smallsquare4 p {
+  font-size: 0.65rem;
 }
 
 .expertise-bar {
   width: 100%;
-  height: 8px;
+  height: 6px;
   background: #f5f5f5;
-  border-radius: 4px;
-  margin: 0.5rem 0;
+  border-radius: 3px;
+  margin: 0.3rem 0;
   position: relative;
   border: 1px solid #e8e8e8;
 }
@@ -3288,8 +3325,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background: #FFD600;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -3301,8 +3338,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   background: rgba(255, 214, 0, 0.3);
   border-radius: 50%;
   z-index: 1;
@@ -3312,11 +3349,11 @@ body {
   position: absolute;
   top: -25px;
   right: -5px;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 700;
   color: #FFA000;
   background: white;
-  padding: 2px 6px;
+  padding: 1px 4px;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 3;
@@ -3397,6 +3434,31 @@ body {
   grid-area: widerect3;
 }
 
+/* Fourth mosaic section */
+.skill-tile.square7 {
+  grid-area: square7;
+}
+
+.skill-tile.largesquare4 {
+  grid-area: largesquare4;
+}
+
+.skill-tile.square8 {
+  grid-area: square8;
+}
+
+.skill-tile.smallsquare4 {
+  grid-area: smallsquare4;
+}
+
+.skill-tile.tallrect4 {
+  grid-area: tallrect4;
+}
+
+.skill-tile.widerect4 {
+  grid-area: widerect4;
+}
+
 /* Mosaic positioning using grid-template-areas */
 #skill__1 { grid-area: square1; }
 #skill__2 { grid-area: largesquare; }
@@ -3420,6 +3482,14 @@ body {
 #skill__16 { grid-area: smallsquare3; }
 #skill__17 { grid-area: tallrect3; }
 #skill__18 { grid-area: widerect3; }
+
+/* Fourth mosaic section */
+#skill__19 { grid-area: square7; }
+#skill__20 { grid-area: largesquare4; }
+#skill__21 { grid-area: square8; }
+#skill__22 { grid-area: smallsquare4; }
+#skill__23 { grid-area: tallrect4; }
+#skill__24 { grid-area: widerect4; }
 
 @media (max-width: 768px) {
   .skills-card {
@@ -3448,7 +3518,13 @@ body {
       'square6'
       'smallsquare3'
       'widerect3'
-      'tallrect3';
+      'tallrect3'
+      'square7'
+      'largesquare4'
+      'square8'
+      'smallsquare4'
+      'widerect4'
+      'tallrect4';
     padding: 1em 3em;
     height: auto;
   }
@@ -3470,7 +3546,13 @@ body {
   .skill-tile.square6,
   .skill-tile.smallsquare3,
   .skill-tile.tallrect3,
-  .skill-tile.widerect3 {
+  .skill-tile.widerect3,
+  .skill-tile.square7,
+  .skill-tile.largesquare4,
+  .skill-tile.square8,
+  .skill-tile.smallsquare4,
+  .skill-tile.tallrect4,
+  .skill-tile.widerect4 {
     grid-area: auto;
   }
   
