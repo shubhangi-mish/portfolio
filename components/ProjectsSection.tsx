@@ -7,7 +7,7 @@ const ProjectsSection: React.FC = () => {
       <div className="projects-grid">
         <div className="project-item">
           <div className="project-image">
-            <div className="project-placeholder">AI/3D</div>
+            <div className="project-placeholder">AI-Text to 3D</div>
           </div>
           <div className="project-content">
             <h3>AI-based Image to 3D Model Generator</h3>
@@ -47,7 +47,7 @@ const ProjectsSection: React.FC = () => {
 
         <div className="project-item">
           <div className="project-image">
-            <div className="project-placeholder">AI/Contract</div>
+            <div className="project-placeholder">AI Extractor</div>
           </div>
           <div className="project-content">
             <h3>Smart Contract Extraction with AI</h3>
@@ -67,7 +67,7 @@ const ProjectsSection: React.FC = () => {
 
         <div className="project-item">
           <div className="project-image">
-            <div className="project-placeholder">AI/CSV</div>
+            <div className="project-placeholder">AI-CSV Modifier</div>
           </div>
           <div className="project-content">
             <h3>AI-enabled CSV Modifier</h3>
@@ -87,7 +87,7 @@ const ProjectsSection: React.FC = () => {
 
         <div className="project-item">
           <div className="project-image">
-            <div className="project-placeholder">AI/Chat</div>
+            <div className="project-placeholder">AI-ChatBot</div>
           </div>
           <div className="project-content">
             <h3>MAYA - The Chat Bot</h3>
@@ -126,68 +126,68 @@ const ProjectsSection: React.FC = () => {
           </div>
         </div>
 
-                 <div className="project-item">
-           <div className="project-image">
-             <div className="project-placeholder">AI/Startup</div>
-           </div>
-           <div className="project-content">
-             <h3>Multi-Agent AI Startup Builder</h3>
-             <p>AI-powered web application that helps entrepreneurs create and refine business ideas using multiple AI agents. Features startup name generation, business model creation, and elevator pitch crafting with collaborative AI insights.</p>
-             <div className="project-tech">
-               <span className="tech-tag">Python</span>
-               <span className="tech-tag">Streamlit</span>
-               <span className="tech-tag">LiteLLM</span>
-               <span className="tech-tag">CrewAI</span>
-               <span className="tech-tag">Docker</span>
-             </div>
-             <div className="project-links">
-               <a href="https://github.com/shubhangi-mish/AI-Startup-builder.git" target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
-             </div>
-           </div>
-         </div>
-
-                   <div className="project-item">
-            <div className="project-image">
-              <div className="project-placeholder">NFT/Hive</div>
+        <div className="project-item">
+          <div className="project-image">
+            <div className="project-placeholder">AgenticAI</div>
+          </div>
+          <div className="project-content">
+            <h3>Multi-Agent AI Startup Builder</h3>
+            <p>AI-powered web application that helps entrepreneurs create and refine business ideas using multiple AI agents. Features startup name generation, business model creation, and elevator pitch crafting with collaborative AI insights.</p>
+            <div className="project-tech">
+              <span className="tech-tag">Python</span>
+              <span className="tech-tag">Streamlit</span>
+              <span className="tech-tag">LiteLLM</span>
+              <span className="tech-tag">CrewAI</span>
+              <span className="tech-tag">Docker</span>
             </div>
-            <div className="project-content">
-              <h3>SafeCase - NFT Marketplace on Hive</h3>
-              <p>Decentralized application (DApp) built on the Hive blockchain for secure, transparent, and tamper-proof management of digital assets. Features image upload, editing, versioning, and authentication with immutable blockchain history.</p>
-              <div className="project-tech">
-                <span className="tech-tag">JavaScript</span>
-                <span className="tech-tag">HTML</span>
-                <span className="tech-tag">CSS</span>
-                <span className="tech-tag">Hive Blockchain</span>
-                <span className="tech-tag">IPFS</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/shubhangi-mish/NFT-market-place-on-Hive.git" target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
-              </div>
+            <div className="project-links">
+              <a href="https://github.com/shubhangi-mish/AI-Startup-builder.git" target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
             </div>
           </div>
+        </div>
 
-          <div className="project-item">
-            <div className="project-image">
-              <div className="project-placeholder">Voice/AI</div>
+        <div className="project-item">
+          <div className="project-image">
+            <div className="project-placeholder">Blockchian-NFT</div>
+          </div>
+          <div className="project-content">
+            <h3>SafeCase - NFT Marketplace on Hive</h3>
+            <p>Decentralized application (DApp) built on the Hive blockchain for secure, transparent, and tamper-proof management of digital assets. Features image upload, editing, versioning, and authentication with immutable blockchain history.</p>
+            <div className="project-tech">
+              <span className="tech-tag">JavaScript</span>
+              <span className="tech-tag">HTML</span>
+              <span className="tech-tag">CSS</span>
+              <span className="tech-tag">Hive Blockchain</span>
+              <span className="tech-tag">IPFS</span>
             </div>
-            <div className="project-content">
-              <h3>Voice AI Chatbot</h3>
-              <p>Voice AI Chatbot that allows users to interact using voice input and receive spoken responses in real-time. Features speech-to-text transcription with Whisper ASR, AI responses using Google Gemini, and text-to-speech conversion with pyttsx3.</p>
-              <div className="project-tech">
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">Whisper ASR</span>
-                <span className="tech-tag">Google Gemini AI</span>
-                <span className="tech-tag">pyttsx3</span>
-                <span className="tech-tag">Gradio</span>
-              </div>
-              <div className="project-links">
-                <a href="https://github.com/shubhangi-mish/My-replication-voicebot.git" target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
-              </div>
+            <div className="project-links">
+              <a href="https://github.com/shubhangi-mish/NFT-market-place-on-Hive.git" target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="project-item">
+          <div className="project-image">
+            <div className="project-placeholder">VoicebotAI</div>
+          </div>
+          <div className="project-content">
+            <h3>Voice AI Chatbot</h3>
+            <p>Voice AI Chatbot that allows users to interact using voice input and receive spoken responses in real-time. Features speech-to-text transcription with Whisper ASR, AI responses using Google Gemini, and text-to-speech conversion with pyttsx3.</p>
+            <div className="project-tech">
+              <span className="tech-tag">Python</span>
+              <span className="tech-tag">Whisper ASR</span>
+              <span className="tech-tag">Google Gemini AI</span>
+              <span className="tech-tag">pyttsx3</span>
+              <span className="tech-tag">Gradio</span>
+            </div>
+            <div className="project-links">
+              <a href="https://github.com/shubhangi-mish/My-replication-voicebot.git" target="_blank" rel="noopener noreferrer" className="project-link">GitHub</a>
             </div>
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 export default ProjectsSection; 
